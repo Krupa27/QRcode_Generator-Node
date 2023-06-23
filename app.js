@@ -15,6 +15,14 @@ qr.toString(stJson,{type:"terminal"})
         console.log(code);
     }
 })
+qr.toDataURL(stJson)
+.then((err,code)=>{
+    if(err){
+        console.log(err);
+    }else{
+        console.log(code);
+    }
+})
 
 qr.toFile("qr.png",stJson)
 .then((err)=>{
